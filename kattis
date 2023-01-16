@@ -1,0 +1,26 @@
+#!/bin/bash
+
+cd $(pwd)
+
+readarray -td . file < <(printf '%s' "$1")  # splittar seinni streng upp í fylki á punkti
+ext="${file[1]}"
+
+case $ext in
+
+"c")
+  gcc -g -O2 -std=gnu11 -static "$1" -lm -o "bin/$file"
+  "bin/$file"
+  ;;
+
+"cpp")
+  g++ -g -O2 -std=gnu++17 -static -lrt -Wl,--whole-archive -lpthread -Wl,--no-whole-archive "$1" -o "bin/$file"
+  "bin/$file"
+  ;;
+
+*)
+  echo "tungumál ekki stutt"
+  ;;
+
+esac
+
+cd ..
