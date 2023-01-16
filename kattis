@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd $(pwd)
+mkdir -p bin
 
 readarray -td . file < <(printf '%s' "$1")  # splittar seinni streng upp í fylki á punkti
 ext="${file[1]}"
@@ -8,13 +9,15 @@ ext="${file[1]}"
 case $ext in
 
 "c")
-  gcc -g -O2 -std=gnu11 -static "$1" -lm -o "bin/$file"
-  "bin/$file"
+  gcc -g -O2 -std=gnu11 -static "$1" -lm -o "bin/c_$file" && "bin/c_$file"
   ;;
 
 "cpp")
-  g++ -g -O2 -std=gnu++17 -static -lrt -Wl,--whole-archive -lpthread -Wl,--no-whole-archive "$1" -o "bin/$file"
-  "bin/$file"
+  g++ -g -O2 -std=gnu++17 -static -lrt -Wl,--whole-archive -lpthread -Wl,--no-whole-archive "$1" -o "bin/cpp_$file" && "bin/cpp_$file"
+  ;;
+
+"rs")
+  rustc -O --crate-type bin --edition=2018 "$1" -o "bin/rust_$file" && "bin/rust_$file"
   ;;
 
 *)
