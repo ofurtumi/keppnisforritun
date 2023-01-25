@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.excalidraw": "json",
+        "*.excalidrawlib": "json",
+        "*.morpho": "java",
+        "tuple": "cpp"
+    }
+}
