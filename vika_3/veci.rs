@@ -5,22 +5,8 @@ fn main() {
     io::stdin().read_line(&mut buffer).ok();
     let buff_arr: Vec<char> = buffer.trim().chars().collect();
     println!("{}", find_smallest_bigger(buff_arr));
-
-    assert_eq!(
-        find_smallest_bigger("218765".trim().chars().collect()),
-        "251678"
-    );
-    assert_eq!(
-        find_smallest_bigger("1234".trim().chars().collect()),
-        "1243"
-    );
-    assert_eq!(find_smallest_bigger("4321".trim().chars().collect()), "0");
-    assert_eq!(
-        find_smallest_bigger("534976".trim().chars().collect()),
-        "536479"
-    );
 }
-
+    
 fn find_smallest_bigger(mut arr: Vec<char>) -> String {
     let n = arr.len();
     let mut smallest = usize::MAX;

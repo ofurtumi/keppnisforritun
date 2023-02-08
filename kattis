@@ -17,7 +17,12 @@ case $ext in
   ;;
 
 "rs")
-  rustc -O --crate-type bin --edition=2018 "$1" -o "bin/rust_$file" && "bin/rust_$file"
+  if [ $2 == "test" ]
+  then
+    rustc -O --crate-type bin --edition=2018 "$1" -o "bin/rust_$file" --test && "bin/rust_$file"
+  else
+    rustc -O --crate-type bin --edition=2018 "$1" -o "bin/rust_$file" && "bin/rust_$file"
+  fi
   ;;
 
 *)

@@ -3,27 +3,67 @@
     "crates": [
         {
             "root_module": "vika_2/radir.rs",
-            "edition": "2021",
+            "edition": "2018",
             "deps": []
         },
         {
             "root_module": "vika_3/rooms.rs",
-            "edition": "2021",
+            "edition": "2018",
             "deps": []
         },
         {
             "root_module": "vika_3/falling.rs",
-            "edition": "2021",
+            "edition": "2018",
             "deps": []
         },
         {
             "root_module": "vika_3/planetaris.rs",
-            "edition": "2021",
+            "edition": "2018",
             "deps": []
         },
         {
             "root_module": "vika_3/veci.rs",
-            "edition": "2021",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_3/tiles.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_3/tiles.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_3/loowater.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_4/boot.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_4/bigbox.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_4/gcd.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_4/debug.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_5/knapsack.rs",
+            "edition": "2018",
             "deps": []
         }
     ]
