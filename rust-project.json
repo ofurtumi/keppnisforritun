@@ -65,6 +65,31 @@
             "root_module": "vika_5/knapsack.rs",
             "edition": "2018",
             "deps": []
+        },
+        {
+            "root_module": "vika_6/backspace.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_6/cookies.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_6/super.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_6/tildes.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_6/union_find.rs",
+            "edition": "2018",
+            "deps": []
         }
     ]
 }
