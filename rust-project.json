@@ -90,6 +90,16 @@
             "root_module": "vika_6/union_find.rs",
             "edition": "2018",
             "deps": []
+        },
+        {
+            "root_module": "vika_7/academic.rs",
+            "edition": "2018",
+            "deps": []
+        },
+        {
+            "root_module": "vika_7/up_down.rs",
+            "edition": "2018",
+            "deps": []
         }
     ]
 }

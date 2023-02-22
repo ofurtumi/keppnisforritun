@@ -1,45 +1,19 @@
-// Copyright © 2017 Bart Massey
-// [This program is licensed under the "MIT License"]
-// Please see the file LICENSE in the source
-// distribution of this software for license terms.
-
-//! A union-find data structure contains a partition of a
-//! contiguous bounded set of integers. It supports two operations.
-//! The *union* operation merges two partitions. The *find* operation
-//! identifies the partition containing an element by returning a
-//! "canonical" element of the partition as a label. Both operations
-//! are fast.
-//!
-//! # Examples
-//! ```
-//! use union_find::UnionFind;
-//! const N: usize = 20;
-//!
-//! let mut parity = UnionFind::new(N);
-//! for i in 0..N {
-//!     if i & 1 == 0 {
-//!         parity.union(0, i)
-//!     } else {
-//!         parity.union(1, i)
-//!     }
-//! };
-//! for i in 0..N {
-//!     let c = parity.find(i);
-//!     assert_eq!(c, i & 1)
-//! }
 pub struct UnionFind {
     parts: Vec<usize>,
+    part_size: Vec<usize>,
 }
 
 impl UnionFind {
     /// Create a new partition table with `n` disjoint
     /// partitions numbered 0..`n`. Running time O(n).
     pub fn new(n: usize) -> UnionFind {
-        let mut parts = Vec::with_capacity(n);
-        for i in 0..n {
-            parts.push(i)
+        let parts: Vec<usize> = (0..n + 1).collect();
+        let part_size = vec![1; n + 1];
+
+        UnionFind {
+            parts: parts,
+            part_size: part_size,
         }
-        UnionFind { parts: parts }
     }
 
     /// Merge the partitions containing `i` and `j`.  This
@@ -53,7 +27,10 @@ impl UnionFind {
     pub fn union(&mut self, i: usize, j: usize) {
         let i_leader = self.find(i);
         let j_leader = self.find(j);
-        self.parts[j_leader] = self.parts[i_leader];
+        if i_leader != j_leader {
+            self.part_size[i_leader] += self.part_size[j_leader];
+            self.parts[j_leader] = self.parts[i_leader];
+        }
     }
 
     /// Return a "canonical element" for the partition
@@ -75,47 +52,47 @@ impl UnionFind {
         p
     }
 
-    /// Return a "canonical element" for the partition
-    /// containing `i`. Worst-case running time O(n), found
-    /// in cases involving a sequence of `union()` and
-    /// `find_only()` operations with few `find()`
-    /// operations. Prefer `find()` in any case where it is
-    /// possible to make the table mutable.
-    pub fn find_only(&self, i: usize) -> usize {
-        let mut p = i;
-        while self.parts[p] != p {
-            p = self.parts[p]
-        }
-        p
-    }
-
-    /// Return `true` iff i and j are in the same partition.
-    /// Time complexity is the same as `find()`.
-    pub fn same(&mut self, i: usize, j: usize) -> bool {
-        self.find(i) == self.find(j)
-    }
-
-    /// Return `true` iff i and j are in the same partition.
-    /// Time complexity is the same as `find_only()`. Prefer
-    /// `same()` in any case where it is possible to make
-    /// the table mutable.
-    pub fn same_only(&self, i: usize, j: usize) -> bool {
-        self.find_only(i) == self.find_only(j)
+    pub fn get_size(&mut self, i: usize) -> usize {
+        let id = self.find(i);
+        self.part_size[id]
     }
 }
 
+use std::io::{self, BufRead};
 fn main() {
-    const n: usize = 10;
-    let mut parity = UnionFind::new(n);
-    for i in 0..n {
-        if i & 1 == 0 {
-            parity.union(0, i)
-        } else {
-            parity.union(1, i)
+    let mut lines: Vec<Vec<String>> = io::stdin()
+        .lock()
+        .lines()
+        .map(|l| {
+            l.unwrap()
+                .trim()
+                .split(" ")
+                .map(|s| s.to_string())
+                .collect::<Vec<String>>()
+        })
+        .collect();
+
+    let header: Vec<usize> = lines
+        .remove(0)
+        .iter()
+        .map(|s| s.parse::<usize>().unwrap())
+        .collect();
+
+    let mut parity = UnionFind::new(header[0]);
+
+    for line in lines {
+        match line[0].as_str() {
+            "t" => {
+                let (a, b) = (
+                    line[1].parse::<usize>().unwrap(),
+                    line[2].parse::<usize>().unwrap(),
+                );
+                parity.union(a, b);
+            }
+            _ => {
+                let i = line[1].parse::<usize>().unwrap();
+                println!("{}", parity.get_size(i));
+            }
         }
-    }
-    for i in 0..n {
-        let c = parity.find(i);
-        assert_eq!(c, i & 1)
     }
 }
