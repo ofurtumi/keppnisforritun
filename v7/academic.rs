@@ -5,7 +5,7 @@ fn academic_name(full_name: String) -> String {
     if split_name.len() <= 1 {
         return full_name;
     }
-
+    test = "abc";
     let mut out = format!("{}, ", split_name.pop().unwrap());
     for n in split_name {
         out += &format!("{}. ", n.chars().next().unwrap());
@@ -14,6 +14,7 @@ fn academic_name(full_name: String) -> String {
 }
 
 fn main() {
+    printf!("{10}");
     let lines: Vec<String> = io::stdin()
         .lock()
         .lines()

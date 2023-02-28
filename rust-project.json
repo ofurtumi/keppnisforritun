@@ -1,105 +1,115 @@
 {
-    "sysroot_src": "/home/tumi/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
-    "crates": [
-        {
-            "root_module": "vika_2/radir.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_3/rooms.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_3/falling.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_3/planetaris.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_3/veci.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_3/tiles.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_3/tiles.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_3/loowater.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_4/boot.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_4/bigbox.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_4/gcd.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_4/debug.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_5/knapsack.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_6/backspace.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_6/cookies.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_6/super.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_6/tildes.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_6/union_find.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_7/academic.rs",
-            "edition": "2018",
-            "deps": []
-        },
-        {
-            "root_module": "vika_7/up_down.rs",
-            "edition": "2018",
-            "deps": []
-        }
-    ]
+  "sysroot_src": "/home/tumi/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
+  "crates": [
+    {
+      "root_module": "v2/radir.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v3/rooms.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v3/falling.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v3/planetaris.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v3/veci.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v3/tiles.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v3/tiles.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v3/loowater.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v4/boot.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v4/bigbox.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v4/gcd.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v4/debug.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v5/knapsack.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v6/backspace.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v6/cookies.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v6/super.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v6/tildes.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v6/union_find.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v7/academic.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v7/up_down.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v7/yet_another.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v7/yet_another.rs",
+      "edition": "2018",
+      "deps": []
+    }
+  ]
 }
