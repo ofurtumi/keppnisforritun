@@ -107,7 +107,22 @@
       "deps": []
     },
     {
-      "root_module": "v7/yet_another.rs",
+      "root_module": "v8/tunnels.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v8/dist.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v8/flying.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v8/bfs2.rs",
       "edition": "2018",
       "deps": []
     }

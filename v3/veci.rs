@@ -6,7 +6,7 @@ fn main() {
     let buff_arr: Vec<char> = buffer.trim().chars().collect();
     println!("{}", find_smallest_bigger(buff_arr));
 }
-    
+
 fn find_smallest_bigger(mut arr: Vec<char>) -> String {
     let n = arr.len();
     let mut smallest = usize::MAX;
