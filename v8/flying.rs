@@ -4,6 +4,7 @@ use std::io;
 #[derive(Clone)]
 struct Graph {
     edges: Vec<Vec<usize>>,
+    weights: Vec<Vec<i64>>,
     visited: Vec<i64>,
     mst: Option<usize>,
 }
@@ -12,6 +13,7 @@ impl Graph {
     pub fn new(v: usize) -> Self {
         Self {
             edges: vec![Vec::with_capacity(v); v],
+            weights: vec![Vec::with_capacity(v); v],
             visited: vec![-1; v],
             mst: None,
         }
@@ -68,20 +70,6 @@ impl Graph {
         }
         return self.mst.unwrap();
     }
-}
-
-fn get_graph(v: usize, e: usize) -> Graph {
-    let mut g = Graph {
-        edges: vec![Vec::new(); v],
-        visited: vec![-1; v],
-        mst: None,
-    };
-    for _j in 0..e {
-        let edge = read_input_line();
-        g.edges[edge[0]].push(edge[1]);
-        g.edges[edge[1]].push(edge[0]);
-    }
-    g
 }
 
 fn read_input_line() -> Vec<usize> {
