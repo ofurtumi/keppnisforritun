@@ -122,7 +122,17 @@
       "deps": []
     },
     {
-      "root_module": "v8/bfs2.rs",
+      "root_module": "v9/graphs.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v9/kruskal.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v9/reactivity.rs",
       "edition": "2018",
       "deps": []
     }
