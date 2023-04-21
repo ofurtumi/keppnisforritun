@@ -135,6 +135,36 @@
       "root_module": "v9/reactivity.rs",
       "edition": "2018",
       "deps": []
+    },
+    {
+      "root_module": "v9/geezer.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v10/meow.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v10/nnn.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v10/dtf.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v10/ap.rs",
+      "edition": "2018",
+      "deps": []
+    },
+    {
+      "root_module": "v10/tilefni.rs",
+      "edition": "2018",
+      "deps": []
     }
   ]
 }

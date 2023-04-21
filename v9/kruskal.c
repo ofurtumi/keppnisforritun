@@ -79,6 +79,8 @@ int main()
 		qsort(t, n - 1, sizeof(t[0]), cmp2);
 		for (i = 0; i < n - 1; i++)
 			printf("%ld %ld\n", t[i].x, t[i].y);
+
+		free(a);
 	}
 	return 0;
 }
